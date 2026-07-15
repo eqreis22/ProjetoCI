@@ -18,7 +18,7 @@ pipeline {
 
             steps{
 
-                sh 'docker compose build'
+                sh 'docker-compose build'
 
             }
 
@@ -28,7 +28,7 @@ pipeline {
 
             steps{
 
-                sh 'docker compose run projeto mvn test'
+                sh 'docker-compose run projeto mvn test'
 
             }
 
