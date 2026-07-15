@@ -1,39 +1,21 @@
 pipeline {
-
-    agent any
-
-    stages {
-
-        stage('Clone'){
-
-            steps{
-
-                checkout scm
-
-            }
-
+    agent {
+        docker {
+            image 'maven:3.9.9-eclipse-temurin-21'
         }
-
-        stage('Build'){
-
-            steps{
-
-                sh 'docker-compose build'
-
-            }
-
-        }
-
-        stage('Testes'){
-
-            steps{
-
-                sh 'docker-compose run projeto mvn test'
-
-            }
-
-        }
-
     }
 
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Testes') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+    }
 }
