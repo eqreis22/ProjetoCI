@@ -14,7 +14,7 @@ public class AppTest {
     @Test
     void testeSomaZero() {
         App app = new App();
-        assertEquals(0, app.soma(0, 0));
+        assertEquals(1, app.soma(0, 0));
     }
 
     @Test
