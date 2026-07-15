@@ -3,7 +3,7 @@ package com.exemplo;
 public class App {
 
     public int soma(int a, int b){
-        System.out.println("Nova versã");
+        System.out.println("Nova versão");
 
         return a+b;
     }
