@@ -9,5 +9,7 @@ public class AppTest {
     void testeSoma() {
         App app = new App();
         assertEquals(4, app.soma(2, 2));
+        assertEquals(10, app.soma(8, 2));
+        assertEquals(20, app.soma(10, 10));
     }
 }
